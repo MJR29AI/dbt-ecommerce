@@ -13,4 +13,4 @@ select product_category_name,
        SUM(CASE WHEN purchase_to = 9 THEN 1 ELSE 0 END) AS purchase_9
        from   `dbt_demo_bigquery.category_to`
         group by product_category_name
-     order by product_category_name;
+     order by product_category_name

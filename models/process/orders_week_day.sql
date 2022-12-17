@@ -9,5 +9,5 @@ FROM
       * EXCEPT(YEAR, WEEK),
       EXTRACT(YEAR FROM DATETIME(order_purchase_timestamp)) AS YEAR ,
       LPAD(CAST( EXTRACT(WEEK  FROM DATETIME(order_purchase_timestamp)) AS string), 2 , "0")  AS WEEK
-    from {{ ref('orders_customer')}}
+    from {{ ref('orders_customer')}})
 

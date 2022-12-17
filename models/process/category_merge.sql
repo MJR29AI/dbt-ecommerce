@@ -6,7 +6,7 @@ from (select
         o.order_id, 
         p.product_category_name , 
         o.order_purchase_timestamp
-      from {{ ref('orders')}} o
+      from {{ ref('orders_week_day')}} o
       left join {{ ref('items')}} i 
       on o.order_id = i.order_id
       left join {{ ref('products')}} p 
@@ -14,5 +14,3 @@ from (select
 where 
 product_category_name is not null 
 group by 1, 2, 3,4
-
-

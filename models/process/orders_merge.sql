@@ -4,7 +4,7 @@ select
   a.customer_unique_id,
   a.week,
   b.first_week as first_week,
-  a.login_week - b.first_week as week_number
+  a.week - b.first_week as week_number
 from   
         {{ ref('orders_week')}} a,
         {{ ref('orders_first_week')}} b

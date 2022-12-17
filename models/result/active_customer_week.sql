@@ -8,4 +8,4 @@ select
 from {{ ref('orders_customer')}}
 group by 1, 2 ,3
 having count(order_id) >= 1
-order by 4,3,3 desc;
+order by 4,3,3 desc
