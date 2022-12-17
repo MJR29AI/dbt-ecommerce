@@ -11,6 +11,7 @@ select product_category_name,
        SUM(CASE WHEN purchase_to = 7 THEN 1 ELSE 0 END) AS purchase_7,
        SUM(CASE WHEN purchase_to = 8 THEN 1 ELSE 0 END) AS purchase_8,
        SUM(CASE WHEN purchase_to = 9 THEN 1 ELSE 0 END) AS purchase_9
-       from   `dbt_demo_bigquery.category_to`
+       from   {{ ref('category_count')}}
         group by product_category_name
      order by product_category_name
+
