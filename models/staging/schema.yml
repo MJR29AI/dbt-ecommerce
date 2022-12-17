@@ -1,0 +1,36 @@
+
+version: 2
+
+sources:
+    - name: staging
+      database: orag-big-data
+      schema: dbt_demo_bigquery
+      tables:
+        - name: olist_customers_dataset
+        - name: olist_geolocation_dataset
+        - name: olist_order_items_dataset
+        - name: olist_order_payments_dataset
+        - name: olist_orders_dataset
+        - name: olist_products_dataset
+        - name: olist_sellers_dataset
+        - name: order_reviews
+        - name: product_category_name_translation
+
+models:
+    - name: ecommerce
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+    - name: my_second_dbt_model
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
