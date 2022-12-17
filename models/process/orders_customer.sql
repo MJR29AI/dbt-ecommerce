@@ -1,3 +1,6 @@
+{{ config(materialized='view') }}
+
+
 select 
     orders.*,
     EXTRACT(YEAR FROM DATETIME(order_purchase_timestamp)) AS YEAR ,

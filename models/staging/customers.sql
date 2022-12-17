@@ -1,5 +1,5 @@
-
 {{ config(materialized='view') }}
+
 select 
     cast(customer_id as STRING) as customer_id, 
     cast(customer_unique_id as STRING) as customer_unique_id, 
