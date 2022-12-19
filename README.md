@@ -17,17 +17,6 @@ This is a Brazilian ecommerce public dataset of orders made at Olist Store. The
 The dataset have 7 table csv 
 
 
-Data Schema
-The data is divided in multiple datasets for better understanding and organization. Please refer to the following data schema when working with it:
-
-
-
-
-		ARCHITECTURE DIAGRAM
-
-
-
-
 PURPOSE
 
 1. Number of orders per Day, Week, Month
@@ -39,9 +28,6 @@ customer before.
 purchased the same category from the previous order
 6. Cross-Category Retention: Percentage of orders in a category that comes from users
 who purchased in a different category on the previous order
-
-
-
 
 HOW TO RUN APPLICATION
 
@@ -57,74 +43,35 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce/download?datasetVers
 https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce 
 
 2.Upload all data to big Query 
-a)Create database <name set> 
-b)Create table / upload all of data to BigQuery 
-	 
+	a)Create database <name set> 
+	b)Create table / upload all of data to BigQuery 	 
 3.Fork repository github https://github.com/muhajir29/dbt-ecommerce 
 4.Create credential json Google cloud platform
 5.Create DBT project
-a)Login dbt cloud
-b)Choice a warehouse Big Query
-
-
-
-
-
-c)Configure your environment
-
-
+	a)Login dbt cloud
+	b)Choice a warehouse Big Query
+	c)Configure your environment
 	Upload service json from you big query, if you are done upload service.json the data can automatic fill by sistem. 
-d)Create database target or output and than test connection
-
-e)Set up repository
-
-
-Connect to your github, and choice the repository https://github.com/muhajir29/dbt-ecommerce
-
-
+	d)Create database target or output and than test connection
+	e)Set up repository
+	Connect to your github, and choice the repository https://github.com/muhajir29/dbt-ecommerce
 f)Your project is ready
-
-
-
-
 6.Build DBT project
-
-In bottom, typing
-“ dbt run”
-And than 
-“dbt test” 
-If evertything already done 
-You can see output model in BigQuery
-
+	In bottom, typing
+	“ dbt run”
+	And than 
+	“dbt test” 
+	If evertything already done 
+	You can see output model in BigQuery
+	
 7.Create Jobs 
-
-
-
-And than 
-
-
-And fill 
-
-
-Checklist generate docs on run
-And create command like this
-And save
-Run now
-
+	And than 
+	And fill 
+	Checklist generate docs on run
+	And create command like this
+	And save
+	Run now
 
 8.View Documentation
-
-
-
-You can se documentation in here, about project or database. 
-
-
-For the testing data. 
-I am testing data with basic testing like unique, not null and reference. 
-
-and this in linegraph, you can see to in documentation --> line
-
-
-
 
 
