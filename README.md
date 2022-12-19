@@ -44,19 +44,30 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 2.Upload all data to big Query 
 	a)Create database <name set> 
-	b)Create table / upload all of data to BigQuery 	 
+	b)Create table / upload all of data to BigQuery 	
+	
 3.Fork repository github https://github.com/muhajir29/dbt-ecommerce 
+
 4.Create credential json Google cloud platform
+
 5.Create DBT project
+
 	a)Login dbt cloud
+
 	b)Choice a warehouse Big Query
+
 	c)Configure your environment
 	Upload service json from you big query, if you are done upload service.json the data can automatic fill by sistem. 
+	
 	d)Create database target or output and than test connection
+	
 	e)Set up repository
 	Connect to your github, and choice the repository https://github.com/muhajir29/dbt-ecommerce
-f)Your project is ready
+	
+	f)Your project is ready
+
 6.Build DBT project
+	
 	In bottom, typing
 	“ dbt run”
 	And than 
