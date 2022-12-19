@@ -52,36 +52,36 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
 5.Create DBT project
 
-	a)Login dbt cloud
+a)Login dbt cloud
 
-	b)Choice a warehouse Big Query
+b)Choice a warehouse Big Query
 
-	c)Configure your environment
-	Upload service json from you big query, if you are done upload service.json the data can automatic fill by sistem. 
-	
-	d)Create database target or output and than test connection
-	
-	e)Set up repository
-	Connect to your github, and choice the repository https://github.com/muhajir29/dbt-ecommerce
-	
-	f)Your project is ready
+c)Configure your environment
+Upload service json from you big query, if you are done upload service.json the data can automatic fill by sistem. 
+
+d)Create database target or output and than test connection
+
+e)Set up repository
+Connect to your github, and choice the repository https://github.com/muhajir29/dbt-ecommerce
+
+f)Your project is ready
 
 6.Build DBT project
 	
-	In bottom, typing
-	“ dbt run”
-	And than 
-	“dbt test” 
-	If evertything already done 
-	You can see output model in BigQuery
+In bottom, typing
+“ dbt run”
+And than 
+“dbt test” 
+If evertything already done 
+You can see output model in BigQuery
 	
 7.Create Jobs 
-	And than 
-	And fill 
-	Checklist generate docs on run
-	And create command like this
-	And save
-	Run now
+And than 
+And fill 
+Checklist generate docs on run
+And create command like this
+And save
+Run now
 
 8.View Documentation
 
