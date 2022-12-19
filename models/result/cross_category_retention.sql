@@ -9,3 +9,5 @@ select
 from {{ ref('category_total_order')}} a
 left join {{ ref('cross_category_purchase_previous')}} b
 on a.product_category_name = b.category_2
+where  product_category_name is not null 
+order by 4 desc
