@@ -28,3 +28,29 @@ models:
   - name: category_merge
     description: >
       combine table orders_week_day, items, and product into one table, and than group by customer_unique_id, order_id, order_purchase_timestamp, product_category_name
+
+  - name: category_rename
+    description: >
+      this table process rename name category product
+
+  - name: category_total_order
+    description: >
+      Total order by category product
+
+  - name: cross_category_purchase_previous
+    description: >
+      Total order from previous pruchase
+
+  - name: cross_category_purchase_second
+    description: >
+      Total order from purchase second order
+
+  - name: cross_category_merge
+    description: >
+      combine table cross_category_purchase_previous and cross_category_purchase_second 
+
+  - name: cross_category_purchase_to
+    description: >
+      create table have column puchase to 
+
+      

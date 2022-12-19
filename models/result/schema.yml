@@ -30,12 +30,15 @@ models:
       answer number 3 : Average Order amount per user within the period
   
   - name: weekly_customer_retention
-    description: >
+    description: > 
       answer number 4: Customers that ordered in the week that was already a customer before
 
   - name: category_retention
-    description: >
+    description: > 
       answer number 5: Orders of an item in a category from users that already
       purchased the same category from the previous order
 
+  - name: cross_category_retention
+    description: > 
+       Percentage of orders in a category that comes from users who purchased in a different category on the previous order 
       
