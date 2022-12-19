@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: number_order_day
+    description: >
+      answer number 1 :  Number of orders per day
+      
+  - name: number_order_week
+    description: >
+      answer number 1 :  Number of orders per week
+
+  - name: number_order_month
+    description: >
+      answer number 1 :  Number of orders per month
+
+  - name: active_customer_day
+    description: >
+      answer number 2 : Customers with >=1 order within the period per Day
+
+  - name: active_customer_week
+    description: >
+      answer number 2 : Customers with >=1 order within the period per Week
+
+  - name: active_customer_month
+    description: >
+      answer number 2 : Customers with >=1 order within the period per Month  
+
+  - name: average_order_user_in_period
+    description: >
+      answer number 3 : Average Order amount per user within the period
+  
+  - name: weekly_customer_retention
+    description: >
+      answer number 4: Customers that ordered in the week that was already a customer before
+
+  - name: category_retention
+    description: >
+      answer number 5: Orders of an item in a category from users that already
+      purchased the same category from the previous order
+
+      
