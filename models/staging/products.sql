@@ -1,4 +1,5 @@
 {{ config(materialized='view') }}
+
 select 
     cast(product_id as STRING) as product_id , 
     cast(product_category_name as STRING) as product_category_name , 
@@ -9,4 +10,5 @@ select
     cast(product_length_cm as INTEGER) as product_length_cm , 
     cast(product_height_cm as INTEGER) as product_height_cm , 
     cast(product_width_cm as INTEGER) as product_width_cm 
+
 from {{source('staging', 'olist_products_dataset')}}

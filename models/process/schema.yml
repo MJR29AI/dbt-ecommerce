@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: orders_customer
+    description: >
+      the view combine between table orders and table customer 
+      
+  - name: orders_week_day
+    description: >
+      extract column year and and week, after that create column week day
+      
+  - name: orders_week
+    description: >
+      select column customer_unique_id and week
+      
+  - name: orders_first_week
+    description: >
+      select column customer_unique_id and just choice the first order
+
+  - name: orders_merge
+    description: >
+      combine between data table orders_week and order_first_week , and calculate distance between week with first_week as table week_number
+      
+  - name: category_count
+    description: >
+      create new column purchase_to, this is how many times of orders.  
+
+  - name: category_merge
+    description: >
+      combine table orders_week_day, items, and product into one table, and than group by customer_unique_id, order_id, order_purchase_timestamp, product_category_name
+
+  - name: category_rename
+    description: >
+      this table process rename name category product
+
+  - name: category_total_order
+    description: >
+      Total order by category product
+
+  - name: cross_category_purchase_previous
+    description: >
+      Total order from previous pruchase
+
+  - name: cross_category_purchase_second
+    description: >
+      Total order from purchase second order
+
+  - name: cross_category_merge
+    description: >
+      combine table cross_category_purchase_previous and cross_category_purchase_second 
+
+  - name: cross_category_purchase_to
+    description: >
+      create table have column puchase to 
+
+      

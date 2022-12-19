@@ -17,20 +17,166 @@ sources:
         - name: product_category_name_translation
 
 models:
-    - name: ecommerce
-      description: "A starter dbt model"
+    - name: customers
+      description: "Customer Table is table have information detail about Customer"
       columns:
-          - name: id
-            description: "The primary key for this table"
+          - name: customer_id
+            description: "means of identification allocated to or selected by the Customer"
             tests:
+                - not_null
                 - unique
+
+          - name: customer_unique_id
+            description: "means the unique means of identification allocated to or selected by the Customer"
+            tests:
                 - not_null
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
+          - name: customer_zip_code_prefix
+            description: "the prefix zip code"
+            tests:
+                - not_null
+
+          - name: customer_city
+            description: "the city of customer"
+            tests:
+                - not_null
+
+          - name: customer_state
+            description: "the state of customer"
+            tests:
+                - not_null
+
+
+    - name: orders
+      description: "The Order table stores transaction details of each order "
       columns:
-          - name: id
-            description: "The primary key for this table"
+          - name: order_id
+            description: "The primary key for this table orders"
             tests:
                 - unique
                 - not_null
+                        
+          - name: customer_id
+            description: "The column about customer identitiy code"
+            tests:
+                - not_null
+                - relationships:
+                    to: ref('customers')
+                    field: customer_id
+
+
+          - name: order_status
+            description: "the status some order"
+            tests:
+                - not_null
+
+          - name: order_purchase_timestamp
+            description: "The time when order is purchased by customer"
+            tests:
+                - not_null
+                
+          - name: order_approved_at
+            description: "The time when order is approved by seller"
+
+          - name: order_delivered_carrier_date
+            description: "The time when order is carry by sender"
+
+          - name: order_delivered_customer_date
+            description: "The time when order is delivered by sender"
+
+          - name: order_estimated_delivery_date
+            description: "the estimation date order deliverd to customer"
+            tests:
+                - not_null
+
+
+    - name: products
+      description: "The Order table stores transaction details of each order "
+      columns:
+
+          - name: product_id
+            description: "The primary key for this table and unique id for product"
+            tests:
+                - not_null
+                - unique
+                - relationships:
+                    to: ref('items')
+                    field: product_id
+
+
+          - name: product_category_name
+            description: "category name some product "
+            
+
+          - name: product_name_lenght
+            description: "lenght of product"
+            
+
+          - name: product_description_lenght
+            description: "description more detail about"
+            
+                
+          - name: product_photos_qty	
+            description: "to total product photos"
+            
+
+          - name: product_weight_g
+            description: "the weight some product in gram"
+            
+
+          - name: product_length_cm
+            description: "the length some product in centimeter"
+            
+
+
+          - name: product_height_cm
+            description: "the height some product in centimeter"
+            
+
+
+          - name: product_width_cm
+            description: "the width some product in centimeter"
+            
+
+  
+
+
+    - name: items
+      description: "The table describe detail about items "
+      columns:
+
+          - name: order_id
+            description: "the id to reference table order id "
+            tests:
+                - not_null
+
+          - name: order_item_id
+            description: "id for item in each order"
+            tests:
+                - not_null
+
+          - name: product_id
+            description: "the id for product "
+            tests:
+                - not_null
+
+          - name: seller_id
+            description: "the id for seller"
+            tests:
+                - not_null
+                
+          - name: shipping_limit_date	
+            description: "the limit date shipping can send order"
+            tests:
+                - not_null
+
+          - name: price
+            description: "price of items"
+            tests:
+                - not_null
+
+          - name: freight_value
+            description: "freight value item"
+            tests:
+                - not_null
+
